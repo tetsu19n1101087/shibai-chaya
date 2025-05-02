@@ -1,0 +1,75 @@
+header {
+  background-image: url(../images/トップページ_最新.jpg);
+  height: 75vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+}
+
+h1 {
+  font-size: 25vw;
+  top: 70%;
+  font-family: toppan-bunkyu-midashi-min-st, serif;
+}
+footer {
+  margin-top: 50px;
+}
+
+.footerLogo {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footerLogo img {
+  width: 100%;
+}
+
+.footerSns {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.wr-footerContent {
+  margin: 15px;
+  padding: 15px;
+  border: solid 2px white;
+}
+
+.footerContent {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.footerContent a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footerLogoSpace {
+  display: flex;
+}
+
+.footerLogoSpace > div {
+  width: 50%;
+}
+
+.footerLogoSpace-l img {
+  width: 80%;
+  margin: auto 0;
+}
+
+.footerLogoSpace-r img {
+  width: 60%;
+  margin-right: 30%;
+}
+
+.footerCopyRight {
+  font-size: 20px;
+  margin-top: 5px;
+}
