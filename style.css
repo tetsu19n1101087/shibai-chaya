@@ -1,0 +1,521 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nnn {
+  font-size: 3px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.front {
+  position: relative;
+  border: solid 2px white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 750px) {
+  .front {
+    width: 750px;
+  }
+}
+
+.buck {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  filter: blur(12px);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 750px) {
+  .front {
+    border: none;
+  }
+
+  .buck {
+    display: none;
+  }
+}
+
+a {
+  color: white;
+}
+
+a:valid {
+  color: white;
+}
+
+h2 {
+  font-family: hwt-republic-gothic-outline, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+.wr-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+.menu {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+}
+
+a {
+  color: white;
+}
+
+img.menulogo {
+  width: 250px;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  position: absolute;
+  height: 3px; /*線の太さ*/
+  width: 25px; /*長さ*/
+  border-radius: 3px;
+  background: rgb(0, 0, 0);
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none; /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0; /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /*最前面に*/
+  width: 90%; /*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px; /*最大幅（調整してください）*/
+  height: 100%;
+  background: rgb(0, 0, 0); /*背景色*/
+  transition: 0.3s ease-in-out; /*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%); /*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block; /*カバーを表示*/
+  opacity: 0.5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%); /*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+.lang {
+  display: flex;
+  list-style: none;
+  margin-left: 10%;
+  text-align: center;
+}
+.langlist {
+  margin-left: 30px;
+}
+
+.list {
+  font-size: 30px;
+  margin-left: 5px;
+  list-style: none;
+}
+.box {
+  float: left;
+}
+
+.boxContainer {
+  overflow: hidden;
+}
+.sns {
+  margin-top: 100px;
+  margin-left: 250px;
+  list-style: none;
+}
+.snslist {
+  margin-bottom: 20px;
+}
+
+.logoFixed {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.logoFixed img {
+  width: 100%;
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  background-image: url(./images/color01/topImage.png);
+  background-size: cover;
+}
+
+.top::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 70%;
+}
+
+.top h1 {
+  text-align: left;
+  font-family: hwt-republic-gothic-outline, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+
+.wr-concept {
+  margin-top: 50px;
+}
+
+.concept {
+  box-sizing: border-box;
+  border: solid 3px white;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.conceptTittle {
+  margin-bottom: 15px;
+}
+
+.conceptTittle :first-child {
+  font-family: toppan-bunkyu-midashi-min-st, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.conceptTittle :last-child {
+  font-family: vdl-v7mincho, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 13px;
+}
+
+.conceptContent {
+  font-size: 11px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.concept > img {
+  width: 40%;
+}
+
+.concept > p {
+  font-size: 8px;
+  margin-top: 15px;
+}
+
+.content-zone {
+  margin: 75px 0;
+  margin-bottom: 150px;
+}
+
+.content {
+  display: flex;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top 50px right 0;
+  margin-bottom: 50px;
+}
+
+.content::before {
+  content: '';
+  display: block;
+  padding-top: 120%;
+}
+
+.contentName {
+  text-align: left;
+  padding: 0 10px;
+  flex-shrink: 0;
+  width: 45%;
+}
+
+#bringRight {
+  text-align: right;
+}
+
+.contentName h3 {
+  font-family: toppan-bunkyu-midashi-min-st, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.contentName a {
+  display: block;
+  align-items: flex-end;
+  font-size: 25px;
+  margin-top: 280px;
+}
+
+.wr-contentText {
+  padding: 0 20px;
+}
+
+.contentText {
+  margin-top: 150px;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: a-otf-ryumin-pr6n, serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  text-shadow: 0px 1px 1px black;
+}
+
+.live {
+  margin-bottom: 150px;
+}
+
+.liveCountDown {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.liveMovie {
+  width: 90%;
+  margin: 30px auto;
+  border: solid 2px white;
+}
+
+.liveMovie img {
+  width: 100%;
+}
+
+.viewMore {
+  text-align: right;
+  margin-right: 10%;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.wr-archive {
+  margin-bottom: 150px;
+}
+
+.archive {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.archiveContent {
+  width: 80%;
+  position: relative;
+}
+
+.archiveTransition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.archiveTransition span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 20px;
+  height: 20px;
+  border: solid 2px dimgray;
+  border-radius: 30%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.archive ul {
+  display: flex;
+}
+
+.archive li {
+  flex-shrink: 0;
+  width: 96%;
+  padding: 0 2%;
+}
+
+.archive li img {
+  width: 100%;
+}
+
+.archiveContent li span::before {
+  content: '';
+  display: inline-block;
+  padding-top: 45%;
+}
+
+.noticeContent {
+  text-align: left;
+  padding: 10px 10px;
+  margin: 0 10%;
+  border: solid 2px white;
+}
+
+.n-content {
+  margin-bottom: 25px;
+}
+
+.noticeContent :last-child {
+  margin: 0;
+}
+
+.n-content > p {
+  text-decoration: underline;
+}
+
+.n-content > div::before {
+  content: '　';
+  display: inline-block;
+  color: black;
+}
+
+.n-content > p::before {
+  content: '・';
+  display: inline-block;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.footerLogo {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footerLogo img {
+  width: 100%;
+}
+
+.footerSns {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.wr-footerContent {
+  margin: 15px;
+  padding: 15px;
+  border: solid 2px white;
+}
+
+.footerContent {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.footerContent a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footerLogoSpace {
+  display: flex;
+}
+
+.footerLogoSpace > div {
+  width: 50%;
+}
+
+.footerLogoSpace-l img {
+  width: 80%;
+  margin: auto 0;
+}
+
+.footerLogoSpace-r img {
+  width: 60%;
+  margin-right: 30%;
+}
+
+.footerCopyRight {
+  font-size: 20px;
+  margin-top: 5px;
+}

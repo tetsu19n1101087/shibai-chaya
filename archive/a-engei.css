@@ -1,0 +1,12 @@
+header {
+    position: relative;
+    background-image: url(./images/engei.png);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size:100%;
+    margin: 0;
+  }
+  body{
+      color: white;
+      margin: 20px;
+  }

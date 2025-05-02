@@ -1,0 +1,62 @@
+<!--ホップアップ用テストファイル-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="alert.css">
+  <title>test</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+  <script type="text/javascript">
+    //セッションデータを取得
+    var data = sessionStorage.getItem('session');
+
+    //セッションデータがあればそれを表示し、なければ新しくデータを追加する
+    if (data) {  //また会ったね と表示される
+    } else {
+      sessionStorage.setItem('session', '初回');
+      var options = {
+          icon: 'info',
+          title:'お知らせ',
+          text:'このWebサイトは、プロジェクト型学習の一環で「伝統芸能を日本の若年層へ広める」ことを目的に、N高等学校に通う全国の生徒がオンライン上のチームに分かれ約1ヶ月半かけて制作しました。公開期間は2021/3/31 までです。期間内は何度でも閲覧可能です。これを機に、日本の伝統芸能や文化が、将来にわたってより豊かに発展し続けることを願っております。\nN高等学校「プロジェクトN」関係者一同',
+          buttons: {
+              Cn: {
+                  text:'关闭',
+                  value: 1,
+                },
+              En: {
+                  text:'Close',
+                  value: 2,
+                },
+              Ja: {
+                  text:'閉じる',
+                  value: 3,
+              }
+          }
+      };
+      swal(options).then(function(value){
+          if(value ==　1){
+              //中国語案内へ飛ばす
+              swal( '中国語案内（ここのページでは使わないポップアップ）', '中国語で同じ紹介をする（中国語用のページに飛ばしてポップアップを表示させる）', 'info');
+          }if(value == 2){
+              //Engへ飛ばす
+　　         　swal( '英語案内（ここのページでは使わないポップアップ）', '英語語で同じ紹介をする（英語語用のページに飛ばしてポップアップを表示させる）', 'info');
+          }if(value == 3){
+              //日本語
+          }
+        
+      });
+
+
+ }
+  </script>
+  <input type="button" id="alert-demo" value="セッション削除（再読み込み後再度ポップアップ表示ボタン）" onClick="clear21()">
+  <script>
+      function clear21(){
+  sessionStorage.clear()}
+  </script>
+</body>
+</html>

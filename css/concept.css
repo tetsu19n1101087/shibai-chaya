@@ -1,0 +1,58 @@
+body{
+    background: black;
+    margin: 0;
+    color: white;
+}
+header {
+    position: relative;
+    background-image: url(..//images/chaya.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size:100%;
+
+    
+}
+.title {
+    position: absolute;
+    color: white;
+    left: 5%;
+    bottom: 10%;
+    font-weight: bold; /*太字に*/
+    font-size: 30px;
+    line-height: 1;
+  }
+.concept{
+    
+    margin-top: 50px;
+    text-align: center;
+}
+.concept_text{
+    padding: 0px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.concept_ex{
+    padding: 12px;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: -0.9px;
+}
+.concept_info{
+    font-size: 12px;
+    text-decoration: underline;
+}
+.sibai{
+    margin-top: 70px;
+    text-align: center;
+}
+.sibai_logo{
+    height: 70px;
+}
+.sibai_ex{
+    padding: 12px;
+    margin-top: -10px;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: -0.9px; 
+}

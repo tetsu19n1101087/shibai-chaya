@@ -1,0 +1,42 @@
+body{
+    background: black;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+header {
+    position: relative;
+    background-image: url(..//images/chaya.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size:100%;
+
+    
+}
+
+.title {
+
+    color: white;
+    font-weight: bold; /*太字に*/
+    font-size: 40px;
+    line-height: 1;
+    padding-top: 20%;
+  }
+  .Not {
+    margin-top: 10px;
+    color: white;
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  ul {
+    list-style: none;
+    text-align: left;
+    font-size:25px;
+    line-height: 2;
+
+  }
+  a{
+    color: white;
+  }
+
