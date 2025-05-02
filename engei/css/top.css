@@ -1,0 +1,195 @@
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+header {
+  position: relative;
+  background-image: url(../images/main.png);
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+.title {
+  position: absolute;
+  color: white;
+  left: 5%;
+  bottom: 10%;
+  font-weight: bold; /*太字に*/
+  font-size: 7em;
+  line-height: 1;
+}
+
+main {
+  background-color: #000;
+  color: white;
+}
+#concept {
+  position: relative;
+  height: 800px;
+}
+#concept_border {
+  border: solid;
+  position: absolute;
+  padding: 30px;
+  margin: auto;
+  width: 60%;
+  height: 50%;
+  top:0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+}
+#concept_title {
+  font-weight: bold; /*太字に*/
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom:30px
+}
+#concept_link {
+  margin-top: 30px;
+  position: absolute;
+  right: 10%;
+  font-size: 1.5em;
+  color: white;
+}
+
+.text {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.content {/*親div*/
+  position: relative;/*相対配置*/
+  height: 600px;
+  overflow: hidden;
+}
+#gagaku .caption, #engeki .caption {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0%;
+  left: 5%;
+  font-weight: bold; /*太字に*/
+  font-size: 5em;/*サイズ2倍*/
+  font-family:'Times New Roman', Times, serif ;
+}
+#engei .caption {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0%;
+  right: 5%;
+  font-weight: bold; /*太字に*/
+  font-size: 5em;/*サイズ2倍*/
+  font-family:'Times New Roman', Times, serif ;
+}
+.content img {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+}
+#gagaku .link, #engeki .link {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 80%;
+  left: 5%;
+  font-size: 2em;/*サイズ2倍*/
+  font-family:'Times New Roman', Times, serif ;
+}
+#engei .link{
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 80%;
+  right: 5%;
+  font-size: 2em;/*サイズ2倍*/
+  font-family:'Times New Roman', Times, serif ;
+}
+#gagaku .des, #engeki .des{
+  position: absolute;
+  background-color:rgb(120, 120, 120, 0.5);
+  color: white;/*文字は白に*/
+  top: 50%;
+  bottom: 0px;
+  left: 60%;
+  right: 5%;
+  font-family:'Times New Roman', Times, serif ;
+  word-wrap: normal;
+  padding: 1%;
+}
+#engei .des{
+  position: absolute;
+  background-color:rgb(120, 120, 120, 0.5);
+  color: white;/*文字は白に*/
+  top: 50%;
+  bottom: 0px;
+  left: 5%;
+  right: 60%;
+  font-family:'Times New Roman', Times, serif ;
+  word-wrap: normal;
+  padding: 1%;
+}
+#live, #archive, #notice {
+  position: relative;/*相対配置*/
+  height: 600px;
+  text-align: center;
+}
+#live p, #archive p, #notice p {
+  top: 10%;
+  left: 0%;
+  right: 0%;
+}
+
+footer {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+#footer_border{
+  position: absolute;
+  border: solid white;
+  width: 90%;
+  height: 90%;
+  top:0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  margin: auto;
+}
+#footer_block {
+  position: absolute;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  top:0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  background-color: #aaa;
+}
+#links {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  line-height: 2;
+}
+footer img {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  width: 200px;
+}
+footer .copy {
+  position: absolute;
+  font-size: 0.75rem;
+  color: #000;
+  top: 70%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+}

@@ -1,0 +1,120 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+
+  font-weight: 900;
+  font-style: normal;
+}
+
+header {
+  background-image: url(../images/level3/演芸1.png);
+  height: 75vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+}
+
+h1 {
+  font-size: 25vw;
+  top: 70%;
+  font-family: toppan-bunkyu-midashi-min-st, serif;
+}
+
+@media screen and (max-width: 480px) {
+  .border-bottom {
+    font-size: 7.44vw;
+  }
+  h4 {
+    font-size: 7vw;
+  }
+  h5 {
+    font-size: 5.9vw;
+  }
+  p {
+    font-size: 4.7vw;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .border-bottom {
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  h5 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+main {
+  color: white;
+}
+footer {
+  margin-top: 50px;
+}
+
+.footerLogo {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.footerLogo img {
+  width: 100%;
+}
+
+.footerSns {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.wr-footerContent {
+  margin: 15px;
+  padding: 15px;
+  border: solid 2px white;
+}
+
+.footerContent {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.footerContent a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footerLogoSpace {
+  display: flex;
+}
+
+.footerLogoSpace > div {
+  width: 50%;
+}
+
+.footerLogoSpace-l img {
+  width: 80%;
+  margin: auto 0;
+}
+
+.footerLogoSpace-r img {
+  width: 60%;
+  margin-right: 30%;
+}
+
+.footerCopyRight {
+  font-size: 20px;
+  margin-top: 5px;
+}
